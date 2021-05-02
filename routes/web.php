@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FrontContoller;
 use App\Http\Controllers\PortfolioController;
+use App\Models\Portfolio;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,3 +36,5 @@ Route::delete('/admin/portfolio/{id}/destroy', [PortfolioController::class, 'des
 Route::get('/admin/portfolio/{id}/edit', [PortfolioController::class, 'edit'])->name('portfolio.edit');
 Route::put('/admin/portfolio/{id}/update', [PortfolioController::class, 'update'])->name('portfolio.update');
     //Create
+Route::get('/admin/portfolio/create', [PortfolioController::class, 'create'])->name('portfolio.create');
+Route::post('/admin/portfolio/store', [PortfolioController::class, 'store'])->name('portfolio.store');

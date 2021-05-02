@@ -24,6 +24,7 @@
                       <a href="{{ route('portfolio.edit', $item->id) }}" class="btn btn-success">Modifier</a>
                       {{-- Route [portfolio.show] not defined ?? --}}
                       {{-- <a href="{{route('portfolio.show', $item->id)}}" class="btn btn-primary">Détails</a> --}}
+                      <a href="{{ route('portfolio.create', $item->id)}}" class="btn btn-primary">create</a>
                     </td>
                 </tr>     
             @endforeach

@@ -42,5 +42,16 @@ class PortfolioController extends Controller
     }
 
     //CREATE - STORE
-    
+    public function create(){
+        return view('admin.portfolio.create');
+    }
+
+    public function store(Request $request){
+        $portfolio = new Portfolio();
+        $portfolio->img = $request->img;
+        $portfolio->filter = $request->filter;
+        $portfolio->save();
+        return redirect()->route('portfolio.index');
+        
+    }
 }
